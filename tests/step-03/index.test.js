@@ -1,3 +1,5 @@
+// tests/step-03/index.test.js
+
 const parseQuery = require('../../src/queryParser');
 
 test('Parse SQL Query', () => {
@@ -6,6 +8,6 @@ test('Parse SQL Query', () => {
     expect(parsed).toEqual({
         fields: ['id', 'name'],
         table: 'sample',
-        "whereClause": null,
+        whereClauses: [] // Updated to expect an empty array for whereClauses
     });
 });
